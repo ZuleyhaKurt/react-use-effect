@@ -7,20 +7,22 @@ const User = () => {
         fetch("https://randomuser.me/api/")
         .then((res) => res.json())
         .then((data) => setUser(data));
-    }
+    };
    
    useEffect(() => {
      getUser()
    
    }, [])
    
-   console.log(user) 
+    console.log(user) 
+    const {name, dob, email, picture } = user;
+    console.log(name)
   return (
       <div>
-          <h1>NAME</h1>
-          <img src="" alt="" />
-          <p>email</p>
-          <h5>DOB</h5>
+          <h1>{name?.first}{ name?.last}</h1>
+          <img  className="rounded-circle" src={picture?.large} alt="" />
+          <p>{email}</p>
+          <h5>{dob?.date}</h5>
           <button className="btn btn-danger" onClick={getUser}>Get User</button>
     </div>
   )
