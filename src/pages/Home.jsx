@@ -9,9 +9,15 @@ const [tutorials, setTutorials] = useState([])
 const url="https://axios-example-cw.herokuapp.com/api/tutorials"
 
     const getTutorials = async () => {
-        const { data } = await axios(url);
+
+        try {
+            const { data } = await axios(url);
         console.log(data)
         setTutorials(data)
+        } catch (error) {
+            console.log(error)
+        }
+        
     }
     
     useEffect(() => {
