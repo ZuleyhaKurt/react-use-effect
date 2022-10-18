@@ -1,7 +1,9 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-import UseEffectHook from "./components/UseEffectHook";
-import User from "./components/User";
+import Home from "./pages/Home";
+
+// import UseEffectHook from "./components/UseEffectHook";
+// import User from "./components/User";
 
 function App() {
   // const [show, setShow] = useState(true)
@@ -10,7 +12,7 @@ function App() {
       {/* <button className="btn btn-dark" onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button>
       
      {show && <UseEffectHook />} */}
-      <User/>
+      <Home/>
     </div>
   );
 }
